@@ -105,8 +105,7 @@ src/
 │   │   └── util/ResumeTextExtractor.java
 │   └── resources/application.yml
 └── test/
-└── java/com/aianalyzer/service/ResumeAnalysisServiceTest.java
-
+    └── java/com/aianalyzer/service/ResumeAnalysisServiceTest.java
 ---
 
 ## Docker
