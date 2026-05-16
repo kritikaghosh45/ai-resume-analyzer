@@ -1,6 +1,6 @@
 # AI Resume Analyzer
 
-[![Java CI](https://github.com/yourusername/ai-resume-analyzer/actions/workflows/maven.yml/badge.svg)](https://github.com/yourusername/ai-resume-analyzer/actions/workflows/maven.yml)
+[![Java CI](https://github.com/kritikaghosh45/ai-resume-analyzer/actions/workflows/maven.yml/badge.svg)](https://github.com/kritikaghosh45/ai-resume-analyzer/actions/workflows/maven.yml)
 [![Java Version](https://img.shields.io/badge/Java-17+-blue.svg)](https://openjdk.java.net/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.4-brightgreen.svg)](https://spring.io/projects/spring-boot)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
