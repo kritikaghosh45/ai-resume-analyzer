@@ -1,3 +1,4 @@
+
 # AI Resume Analyzer
 
 [![Java CI](https://github.com/kritikaghosh45/ai-resume-analyzer/actions/workflows/maven.yml/badge.svg)](https://github.com/kritikaghosh45/ai-resume-analyzer/actions/workflows/maven.yml)
@@ -5,19 +6,23 @@
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.4-brightgreen.svg)](https://spring.io/projects/spring-boot)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-A Java Spring Boot prototype for AI-powered resume analysis with file upload, text extraction, skill detection, and scoring. This version uses only standard Java libraries for text extraction, supporting plain text resume files.
+A Java Spring Boot application for AI-powered resume analysis with file upload, text extraction, skill detection, and scoring. This version uses only standard Java libraries for text extraction, supporting plain text resume files.
 
-## 🚀 Features
+---
 
-- 📄 **Resume Upload**: Accept plain text resume files (.txt)
-- 🔍 **Text Extraction**: Extract resume content using standard Java I/O
-- 🧠 **Skill Detection**: Identify key technical and professional skills
-- 📊 **Scoring System**: Calculate relevance scores for job-title matching
-- 🌐 **REST API**: Simple, clean API for integration
-- 🐳 **Docker Support**: Containerized deployment ready
-- ✅ **Unit Tests**: Comprehensive test coverage
+## Features
 
-## 📋 Table of Contents
+- **Resume Upload** — Accept plain text resume files (.txt)
+- **Text Extraction** — Extract resume content using standard Java I/O
+- **Skill Detection** — Identify key technical and professional skills
+- **Scoring System** — Calculate relevance scores for job-title matching
+- **REST API** — Simple, clean API for integration
+- **Docker Support** — Containerized deployment ready
+- **Unit Tests** — Comprehensive test coverage
+
+---
+
+## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -28,7 +33,9 @@ A Java Spring Boot prototype for AI-powered resume analysis with file upload, te
 - [Contributing](#contributing)
 - [License](#license)
 
-## 🛠 Installation
+---
+
+## Installation
 
 ### Prerequisites
 
@@ -42,19 +49,24 @@ git clone https://github.com/kritikaghosh45/ai-resume-analyzer.git
 cd ai-resume-analyzer
 
 # Build the project
-./mvnw clean package
+./mvnw clean package        # Mac/Linux
+mvnw.cmd clean package      # Windows
 
 # Run tests
-./mvnw test
+./mvnw test                 # Mac/Linux
+mvnw.cmd test               # Windows
 ```
 
-## 🚀 Usage
+---
+
+## Usage
 
 ### Running the Application
 
 ```bash
 # Run with Maven wrapper
-./mvnw spring-boot:run
+./mvnw spring-boot:run                          # Mac/Linux
+mvnw.cmd spring-boot:run                        # Windows
 
 # Or run the JAR directly
 java -jar target/ai-resume-analyzer-0.1.0.jar
@@ -62,17 +74,31 @@ java -jar target/ai-resume-analyzer-0.1.0.jar
 
 The application will start on `http://localhost:8080`
 
-### API Endpoints
+---
 
-#### POST `/api/v1/resume/analyze`
+## API Documentation
 
-Analyze a resume file and return skill detection and scoring results.
+### Base URL
 
-**Parameters:**
-- `file` (required): Plain text resume file (.txt)
-- `jobTitle` (optional): Job title to bias scoring
+```
+http://localhost:8080/api/v1
+```
 
-**Response:**
+### Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/resume/analyze` | Analyze resume file |
+
+### Parameters
+
+| Key | Type | Required | Description |
+|-----|------|----------|-------------|
+| `file` | File | Yes | Plain text resume file (.txt) |
+| `jobTitle` | Text | No | Job title to bias scoring |
+
+### Response
+
 ```json
 {
   "fileName": "resume.txt",
@@ -84,52 +110,9 @@ Analyze a resume file and return skill detection and scoring results.
 }
 ```
 
-## 📖 API Documentation
+---
 
-### Base URL
-```
-http://localhost:8080/api/v1
-```
-
-### Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/resume/analyze` | Analyze resume file |
-
-### Request/Response Examples
-
-#### Successful Analysis
-```bash
-curl -X POST http://localhost:8080/api/v1/resume/analyze \
-  -F "file=@sample_resume.txt" \
-  -F "jobTitle=Java Developer"
-```
-
-Response:
-```json
-{
-  "fileName": "sample_resume.txt",
-  "detectedSkills": ["java", "spring", "hibernate", "docker"],
-  "score": 52,
-  "relevance": 0.8666666666666667,
-  "jobTitleMatchScore": 20,
-  "extractedText": "Experienced Java Developer with 5+ years..."
-}
-```
-
-#### Error Response
-```json
-{
-  "timestamp": "2026-05-14T10:30:00.000+00:00",
-  "status": 400,
-  "error": "Bad Request",
-  "message": "Unsupported file type. Only plain text files are supported in this pure Java version.",
-  "path": "/api/v1/resume/analyze"
-}
-```
-
-## 💡 Examples
+## Examples
 
 ### 1. Basic Resume Analysis
 
@@ -161,12 +144,14 @@ curl -X POST http://localhost:8080/api/v1/resume/analyze \
 
 1. Open Postman
 2. Create a new POST request to `http://localhost:8080/api/v1/resume/analyze`
-3. In Body tab, select "form-data"
-4. Add key "file" with type "File" and select your .txt resume
-5. Add key "jobTitle" with type "Text" and value "Java Developer"
-6. Send the request
+3. In the **Body** tab, select **form-data**
+4. Add key `file` → set type to **File** → select your `.txt` resume
+5. Add key `jobTitle` → set type to **Text** → enter a role (e.g. `Java Developer`)
+6. Click **Send**
 
-## 🧪 Development
+---
+
+## Development
 
 ### Project Structure
 
@@ -187,18 +172,13 @@ src/
 ### Running Tests
 
 ```bash
-./mvnw test
+./mvnw test        # Mac/Linux
+mvnw.cmd test      # Windows
 ```
 
-### Code Style
+---
 
-This project follows standard Java conventions. Use your IDE's formatting tools or:
-
-```bash
-./mvnw spotless:apply
-```
-
-## 🐳 Docker
+## Docker
 
 ### Build Docker Image
 
@@ -223,22 +203,32 @@ services:
       - "8080:8080"
 ```
 
-## 🤝 Contributing
+---
+
+## Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add your feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
 5. Open a Pull Request
 
-### Development Guidelines
+### Guidelines
 
 - Write unit tests for new features
 - Follow Java naming conventions
 - Update documentation as needed
-- Ensure all tests pass before submitting PR
+- Ensure all tests pass before submitting a PR
 
-## 🙏 Acknowledgments
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+## Acknowledgments
 
 - Built with Spring Boot
 - Inspired by modern resume analysis tools
