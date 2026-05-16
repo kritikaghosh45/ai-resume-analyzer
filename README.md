@@ -95,18 +95,8 @@ curl -X POST http://localhost:8080/api/v1/resume/analyze \
 
 ## Project Structure
 
-src/
-├── main/
-│   ├── java/com/aianalyzer/
-│   │   ├── AIResumeAnalyzerApplication.java
-│   │   ├── controller/ResumeController.java
-│   │   ├── service/ResumeAnalysisService.java
-│   │   ├── dto/ResumeAnalysisResponse.java
-│   │   └── util/ResumeTextExtractor.java
-│   └── resources/application.yml
-└── test/
-    └── java/com/aianalyzer/service/ResumeAnalysisServiceTest.java
----
+<img width="767" height="337" alt="image" src="https://github.com/user-attachments/assets/22b6d2a7-79f8-4328-9c0f-4af8c596e7c6" />
+
 
 ## Docker
 
