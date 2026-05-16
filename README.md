@@ -232,3 +232,4 @@ This project is licensed under the MIT License.
 - Built with Spring Boot
 - Inspired by modern resume analysis tools
 - Pure Java implementation for educational purposes
+
