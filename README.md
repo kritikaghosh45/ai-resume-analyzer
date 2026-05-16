@@ -1,4 +1,3 @@
-
 # AI Resume Analyzer
 
 [![Java CI](https://github.com/kritikaghosh45/ai-resume-analyzer/actions/workflows/maven.yml/badge.svg)](https://github.com/kritikaghosh45/ai-resume-analyzer/actions/workflows/maven.yml)
