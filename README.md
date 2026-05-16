@@ -38,7 +38,7 @@ A Java Spring Boot prototype for AI-powered resume analysis with file upload, te
 ### Clone and Build
 
 ```bash
-git clone https://github.com/yourusername/ai-resume-analyzer.git
+git clone https://github.com/kritikaghosh45/ai-resume-analyzer.git
 cd ai-resume-analyzer
 
 # Build the project
