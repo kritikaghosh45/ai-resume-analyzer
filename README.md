@@ -1,11 +1,11 @@
 # AI Resume Analyzer
 
-[![Java CI](https://github.com/yourusername/ai-resume-analyzer/actions/workflows/maven.yml/badge.svg)](https://github.com/yourusername/ai-resume-analyzer/actions/workflows/maven.yml)
+[![Java CI](https://github.com/kritikaghosh45/ai-resume-analyzer/actions/workflows/maven.yml/badge.svg)](https://github.com/kritikaghosh45/ai-resume-analyzer/actions/workflows/maven.yml)
 [![Java Version](https://img.shields.io/badge/Java-17+-blue.svg)](https://openjdk.java.net/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.4-brightgreen.svg)](https://spring.io/projects/spring-boot)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-A Java Spring Boot prototype for AI-powered resume analysis with file upload, text extraction, skill detection, and scoring. This version uses only standard Java libraries for text extraction, supporting plain text resume files.
+A Java Spring Boot prototype for AI-powered resume analysis with file upload, text extraction, skill detection, and scoring. This version supports plain text, PDF, and Word resume files (TXT, PDF, DOC, DOCX).
 
 ## 🚀 Features
 
@@ -38,7 +38,7 @@ A Java Spring Boot prototype for AI-powered resume analysis with file upload, te
 ### Clone and Build
 
 ```bash
-git clone https://github.com/yourusername/ai-resume-analyzer.git
+git clone https://github.com/kritikaghosh45/ai-resume-analyzer.git
 cd ai-resume-analyzer
 
 # Build the project
